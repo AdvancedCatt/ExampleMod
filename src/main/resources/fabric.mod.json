@@ -19,13 +19,17 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "com.adoneko.examplemod.ExampleMod"
+      {
+        "adapter": "kotlin",
+        "value": "com.adoneko.examplemod.ExampleMod"
+      }
     ]
   },
 
   "depends": {
     "fabricloader": ">=0.14.11",
     "fabric-api": "*",
+    "fabric-language-kotlin": "${fabric_kotlin_version}",
     "minecraft": "1.19.3",
     "java": ">=17"
   },

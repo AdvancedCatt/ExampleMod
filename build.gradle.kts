@@ -36,6 +36,7 @@ dependencies {
 
 tasks {
     val mod_version: String by project.extra
+    val fabric_kotlin_version: String by project.extra
 
     withType<KotlinCompile> {
         kotlinOptions.jvmTarget = JavaVersion.VERSION_17.toString()
@@ -44,7 +45,8 @@ tasks {
     processResources {
         filesMatching("fabric.mod.json") {
             expand(mapOf(
-                "version" to mod_version
+                "version" to mod_version,
+                "fabric_kotlin_version" to fabric_kotlin_version
             ))
         }
     }
